@@ -75,9 +75,9 @@ export const profile = {
     contact: {
       email: "nithy.official95@gmail.com",
       gitHub: "https://github.com/nithy95",
-      linkedIn: "www.linkedin.com/in/gnithyanantham",
+      linkedIn: "https://www.linkedin.com/in/gnithyanantham",
       medium: "https://medium.com/@nithy.official95",
-      instagram:""
+      instagram: "https://www.instagram.com/__nithy_",
     },
   },
   professional: {
