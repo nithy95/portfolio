@@ -142,7 +142,6 @@ function App() {
                 open={open}
                 onClose={handlePopoverClose}
                 anchorEl={anchorRef.current}
-                sx={{ width: 220 }}
               >
                 <Box sx={{ p: 1, pl: 3 }}>
                   <CirclePicker

@@ -1,0 +1,25 @@
+.contact {
+  margin: 5%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container ul {
+  width: fit-content;
+  list-style: "none";
+}
+
+.contact-container ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.social-bar {
+  margin: 30px 30px 0;
+}

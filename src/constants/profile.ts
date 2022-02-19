@@ -72,10 +72,13 @@ export const profile = {
     firstName: "Nithyanantham",
     lastName: "Gopalsamy",
     birthDate: "02/09/1995",
-    email: "nithy.official95@gmail.com",
-    gitHub: "https://github.com/nithy95",
-    linkedIn: "",
-    medium: "",
+    contact: {
+      email: "nithy.official95@gmail.com",
+      gitHub: "https://github.com/nithy95",
+      linkedIn: "www.linkedin.com/in/gnithyanantham",
+      medium: "https://medium.com/@nithy.official95",
+      instagram:""
+    },
   },
   professional: {
     experiences: [
