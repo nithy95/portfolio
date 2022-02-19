@@ -1,92 +1,102 @@
 import { ThemeOptions } from "@mui/material/styles";
 
 const themeOptions = new Map([
-    ["#0277bd",
-        {
-            primary: {
-                main: '#0277bd',
-            },
-            secondary: {
-                main: '#01579b',
-            },
-        },
-
-    ],
-    ["#00838f", {
-        primary: {
-            main: '#00838f',
-        },
-        secondary: {
-            main: '#006064',
-        },
-
-    }],
-    ["#78909c",
-        {
-            primary: {
-                main: '#78909c',
-            },
-            secondary: {
-                main: '#455a64',
-            },
-        },
-
-    ],
-    ["#ff7043",
-        {
-            primary: {
-                main: '#ff7043',
-            },
-            secondary: {
-                main: '#bf360c',
-            },
-        },
-
-    ]
-])
+  [
+    "#ffb74d",
+    {
+      primary: {
+        main: "#ffb74d",
+      },
+      secondary: {
+        main: "#f57c00",
+      },
+    },
+  ],
+  [
+    "#ff7043",
+    {
+      primary: {
+        main: "#ff7043",
+      },
+      secondary: {
+        main: "#bf360c",
+      },
+    },
+  ],
+  [
+    "#0277bd",
+    {
+      primary: {
+        main: "#0277bd",
+      },
+      secondary: {
+        main: "#01579b",
+      },
+    },
+  ],
+  [
+    "#00838f",
+    {
+      primary: {
+        main: "#00838f",
+      },
+      secondary: {
+        main: "#006064",
+      },
+    },
+  ],
+  [
+    "#78909c",
+    {
+      primary: {
+        main: "#78909c",
+      },
+      secondary: {
+        main: "#455a64",
+      },
+    },
+  ],
+]);
 
 export const defaultPalette: ThemeOptions = {
-    palette: {
-        mode: 'dark',
-        primary: {
-            main: '#1e559a',
-        },
-        secondary: {
-            main: '#6c757d',
-        },
+  palette: {
+    mode: "dark",
+    primary: {
+      main: "#1e559a",
     },
-    components:{
-        MuiTypography:{
-            styleOverrides:{
-                h3:{
-                    fontFamily: "'Righteous', cursive",
-                }
-            }
-        }
-    }
+    secondary: {
+      main: "#6c757d",
+    },
+  },
 };
 
-export const defaultColor = '#0277bd'
+export const defaultColor = "#ffb74d";
 
-export const defaultTheme = 'dark'
+export const defaultTheme = "dark";
 
-export const darkThemeSuggestion = ['#00838f']
+export const darkThemeSuggestion = ["#00838f"];
 
-export const lightThemeSuggestion = ['#ff7043']
+export const lightThemeSuggestion = ["#ff7043", "#ffb74d"];
 
 export const backgoroundPalette = new Map([
-    ['dark', {
-        background: {
-            default: '#303030',
-            paper: '#424242',
-        },
-    }],
-    ['light', {
-        background: {
-            default: '#fafafa',
-            paper: '#ffffff',
-        },
-    }]
-])
+  [
+    "dark",
+    {
+      background: {
+        default: "#303030",
+        paper: "#424242",
+      },
+    },
+  ],
+  [
+    "light",
+    {
+      background: {
+        default: "#fafafa",
+        paper: "#ffffff",
+      },
+    },
+  ],
+]);
 
-export default themeOptions
+export default themeOptions;
