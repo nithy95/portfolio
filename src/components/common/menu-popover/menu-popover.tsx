@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-// material
 import { Popover } from "@mui/material";
 import { alpha, styled } from "@mui/material/styles";
 import { FunctionComponent } from "react";
@@ -18,9 +16,8 @@ const ArrowStyle = styled("span")(({ theme }) => ({
     position: "absolute",
     borderRadius: "0 0 4px 0",
     transform: "rotate(-135deg)",
-    // find a way to do this from theme, using theme.palette.background.default
-    background: theme.palette.mode == "dark" ? "#303030" : "#fff",
-    // background:theme.palette.background.paper,
+    //TODO: find a way to do this from theme, using theme.palette.background.default
+    background: theme.palette.mode === "dark" ? "#303030" : "#fff",
     borderRight: `solid 1px ${alpha(theme.palette.grey[500], 0.12)}`,
     borderBottom: `solid 1px ${alpha(theme.palette.grey[500], 0.12)}`,
   },

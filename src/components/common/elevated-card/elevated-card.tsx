@@ -1,4 +1,4 @@
-import { Divider, Grid, Paper, Typography } from "@mui/material";
+import { Divider, Grid, Paper } from "@mui/material";
 import { FunctionComponent } from "react";
 import ElevatedCardProps from "../../../models/common/elevated-card-model";
 import { Body1Typography } from "../typographies/typographies";

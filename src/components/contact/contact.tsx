@@ -6,33 +6,17 @@ import {
   IconButton,
   Alert,
   Snackbar,
-  Grid,
   Typography,
-  Icon,
-  Paper,
-  Table,
-  TableCell,
-  TableRow,
 } from "@mui/material";
 import { profile } from "../../constants/profile";
 import { ElevatedCard } from "../common/elevated-card/elevated-card";
 import copy from "copy-to-clipboard";
-import React, { useState } from "react";
-// import GitHubIcon from "@mui/icons-material/GitHub";
-// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useState } from "react";
 import MediumIcon from "../common/icons/medium";
 import GitHubIcon from "../common/icons/github";
 import LinkedInIcon from "../common/icons/linkedin";
-// import { ReactComponent as Medium } from "../../assets/images/medium.svg";
-import { ReactComponent as GitHub } from "../../assets/images/github.svg";
-import { ReactComponent as LinkedIn } from "../../assets/images/linkedin.svg";
-import { useTheme, Theme } from "@mui/material/styles";
-import SvgIcon from "@mui/material/SvgIcon";
+import { useTheme } from "@mui/material/styles";
 import InstagramIcon from "../common/icons/instagram";
-
-{
-  /* TODO: Add mail icon here */
-}
 
 // Icons used from https://icons8.com/icon/set/social-media/fluency-systems-regular
 export default function Contact() {

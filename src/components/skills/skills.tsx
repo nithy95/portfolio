@@ -1,4 +1,4 @@
-import { Paper, Grid, Typography, Divider, Theme } from "@mui/material";
+import { Grid } from "@mui/material";
 import { profile } from "../../constants/profile";
 import { ElevatedCard } from "../common/elevated-card/elevated-card";
 import { Body1Typography } from "../common/typographies/typographies";

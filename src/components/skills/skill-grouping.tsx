@@ -1,4 +1,4 @@
-import { Stack, Theme, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import Skill from "../../models/skills/skill.model";
 import { Body1Typography } from "../common/typographies/typographies";
 import SkillMeter from "./skill-meter";

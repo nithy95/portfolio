@@ -1,4 +1,3 @@
-import { useTheme, Theme } from "@mui/material/styles";
 import SvgIcon from "@mui/material/SvgIcon";
 
 const MediumIcon = (props: any) => {

@@ -1,6 +1,6 @@
 import { LinearProgress } from "@material-ui/core";
-import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
-import { Theme, useTheme } from "@mui/material/styles";
+import { lighten, withStyles } from "@material-ui/core/styles";
+import { Theme } from "@mui/material/styles";
 
 const styles = (theme: Theme) => {
   return {

@@ -6,7 +6,6 @@ import {
   IconButton,
   Toolbar,
   PaletteMode,
-  Typography,
   Snackbar,
   Button,
 } from "@mui/material";
@@ -25,7 +24,6 @@ import TransparentAppBar from "./components/common/app-bar/app-bar";
 //@ts-ignore
 import { CirclePicker } from "@ziyang2go/react-color";
 import themeOptions, {
-  backgoroundPalette,
   darkThemeSuggestion,
   defaultColor,
   defaultPalette,
@@ -53,7 +51,7 @@ function App() {
 
   useEffect(() => {
     const themeOption = themeOptions.get(currentPalette)!;
-    const background = backgoroundPalette.get(mode);
+    // const background = backgoroundPalette.get(mode);
     // TODO: add backgorund below
     const newThemeOption = { palette: { mode: mode, ...themeOption } };
 
@@ -82,12 +80,12 @@ function App() {
   const handleColorChange = (color: any) => {
     if (darkThemeSuggestion.includes(color.hex)) {
       //This only enables if the current mode is not the desired one
-      setShowThemeSuggestion(mode != "dark");
+      setShowThemeSuggestion(mode !== "dark");
       setSuggestionMessage("This palette looks good on Dark mode!!");
     }
 
     if (lightThemeSuggestion.includes(color.hex)) {
-      setShowThemeSuggestion(mode != "light");
+      setShowThemeSuggestion(mode !== "light");
       setSuggestionMessage("This palette looks good on Light mode!!");
     }
     setCurrentPalette(color.hex);

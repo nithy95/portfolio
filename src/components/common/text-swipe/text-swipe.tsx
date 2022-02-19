@@ -1,6 +1,5 @@
 import "./text-swipe.css";
-import { useTheme, Theme } from "@mui/material/styles";
-import { makeStyles, alpha } from "@material-ui/core/styles";
+import { useTheme } from "@mui/material/styles";
 
 const TextSwipe = () => {
   const currentTheme = useTheme();

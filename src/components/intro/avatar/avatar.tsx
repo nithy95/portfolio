@@ -54,6 +54,7 @@ const Avatar = (props: { style?: any }) => {
   return (
     <img
       src={MyPic}
+      alt="nithy"
       className={rippleImageStyles.rippleImage}
       width="50%"
       height="auto"

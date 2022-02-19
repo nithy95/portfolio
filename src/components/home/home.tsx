@@ -1,4 +1,3 @@
-import { useTheme } from "@mui/material/styles";
 import Contact from "../contact/contact";
 import Experience from "../experience/experience";
 import Introduction from "../intro/introduction-component";
