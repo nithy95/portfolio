@@ -81,6 +81,7 @@ export const profile = {
     },
   },
   professional: {
+    resume: `${process.env.PUBLIC_URL}/Nithyanantham Gopalsamy Resume.pdf`,
     experiences: [
       {
         id: 1,

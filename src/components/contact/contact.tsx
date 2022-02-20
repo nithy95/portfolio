@@ -7,6 +7,7 @@ import {
   Alert,
   Snackbar,
   Typography,
+  Tooltip,
 } from "@mui/material";
 import { profile } from "../../constants/profile";
 import { ElevatedCard } from "../common/elevated-card/elevated-card";
@@ -15,19 +16,40 @@ import { useState } from "react";
 import MediumIcon from "../common/icons/medium";
 import GitHubIcon from "../common/icons/github";
 import LinkedInIcon from "../common/icons/linkedin";
-import { useTheme } from "@mui/material/styles";
 import InstagramIcon from "../common/icons/instagram";
+import DownloadIcon from "../common/icons/download";
+import { useTheme, Theme } from "@mui/material/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import SocialMediaIconButton from "../common/buttons/social-media-icon-button";
+import FacebookIcon from "../common/icons/facebook";
+import Divider from "@mui/material/Divider";
 
 // Icons used from https://icons8.com/icon/set/social-media/fluency-systems-regular
+
+const animationStyles = (animation: string) => {
+  return {
+    resume: {
+      animation: animation,
+    },
+  };
+};
+
 export default function Contact() {
   const [open, setOpen] = useState(false);
 
+  const [downloadAnimation, setDownloadAnimation] = useState(
+    "tada 2.5s linear infinite"
+  );
   const handleClose = () => {
     setOpen(false);
   };
-  const currentTheme = useTheme();
 
   const contact = profile.personal.contact;
+
+  const currentTheme = useTheme();
+
+  const downloadButtonStyles = makeStyles(animationStyles(downloadAnimation))();
+
   return (
     <ElevatedCard title={"Hire Me"}>
       <div className="contact">
@@ -69,35 +91,71 @@ export default function Contact() {
           <ul>
             <li className="social-bar">
               <a href={contact.linkedIn} target="_blank">
-                <LinkedInIcon
-                  fontSize="large"
-                  color={currentTheme.palette.primary.main}
-                />
+                <SocialMediaIconButton>
+                  <LinkedInIcon
+                    fontSize="large"
+                    color={currentTheme.palette.primary.main}
+                  />
+                </SocialMediaIconButton>
               </a>
             </li>
             <li className="social-bar">
               <a href={contact.gitHub} target="_blank">
-                <GitHubIcon
-                  fontSize="large"
-                  color={currentTheme.palette.primary.main}
-                />
+                <SocialMediaIconButton>
+                  <GitHubIcon
+                    fontSize="large"
+                    color={currentTheme.palette.primary.main}
+                  />
+                </SocialMediaIconButton>
               </a>
             </li>
             <li className="social-bar">
               <a href={contact.medium} target="_blank">
-                <MediumIcon
-                  fontSize="large"
-                  color={currentTheme.palette.primary.main}
-                />
+                <SocialMediaIconButton>
+                  <MediumIcon
+                    fontSize="large"
+                    color={currentTheme.palette.primary.main}
+                  />
+                </SocialMediaIconButton>
+              </a>
+            </li>
+            {/* <Divider orientation="vertical" flexItem /> */}
+            <li className="social-bar">
+              <a href={contact.instagram} target="_blank">
+                <SocialMediaIconButton>
+                  <InstagramIcon
+                    fontSize="large"
+                    color={currentTheme.palette.primary.main}
+                  />
+                </SocialMediaIconButton>
               </a>
             </li>
             <li className="social-bar">
               <a href={contact.instagram} target="_blank">
-                <InstagramIcon
-                  fontSize="large"
-                  color={currentTheme.palette.primary.main}
-                />
+                <SocialMediaIconButton>
+                  <FacebookIcon
+                    fontSize="large"
+                    color={currentTheme.palette.primary.main}
+                  />
+                </SocialMediaIconButton>
               </a>
+            </li>
+            <li className="social-bar">
+              <Tooltip title="Download My Resume" placement="top-start" arrow>
+                <a href={profile.professional.resume} download>
+                  <SocialMediaIconButton
+                    className={downloadButtonStyles.resume}
+                    onClick={() => {
+                      setDownloadAnimation("none");
+                    }}
+                  >
+                    <DownloadIcon
+                      fontSize="large"
+                      color={currentTheme.palette.primary.main}
+                    />
+                  </SocialMediaIconButton>
+                </a>
+              </Tooltip>
             </li>
           </ul>
         </div>
