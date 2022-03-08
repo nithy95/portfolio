@@ -1,4 +1,4 @@
-import { Divider, Grid, Paper } from "@mui/material";
+import { Divider } from "@mui/material";
 import { FunctionComponent } from "react";
 import ElevatedCardProps from "../../../models/common/elevated-card-model";
 import { Body1Typography } from "../typographies/typographies";
@@ -6,16 +6,17 @@ import { Body1Typography } from "../typographies/typographies";
 export const ElevatedCard: FunctionComponent<ElevatedCardProps> = ({
   title,
   children,
+  bg,
+  id,
 }) => {
   return (
-    <Paper
-      elevation={3}
-      style={{
-        margin: "10%",
-        width: "80%",
-        height: "80%",
-        borderRadius: "10px",
-      }}
+    <section
+      // style={{
+      //   width: "100%",
+      //   minHeight: "100vh",
+      //   background: bg,
+      // }}
+      id={id}
     >
       {title && (
         <>
@@ -31,9 +32,7 @@ export const ElevatedCard: FunctionComponent<ElevatedCardProps> = ({
           <Divider />
         </>
       )}
-      <Grid container spacing={2} style={{ margin: "10px" }}>
-        {children}
-      </Grid>
-    </Paper>
+      {children}
+    </section>
   );
 };

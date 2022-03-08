@@ -6,6 +6,7 @@ const themeOptions = new Map([
     {
       primary: {
         main: "#ffb74d",
+        dark: "#d69c42",
       },
       secondary: {
         main: "#f57c00",
@@ -83,7 +84,7 @@ export const backgoroundPalette = new Map([
     "dark",
     {
       background: {
-        default: "#303030",
+        default: "#343a40",
         paper: "#424242",
       },
     },

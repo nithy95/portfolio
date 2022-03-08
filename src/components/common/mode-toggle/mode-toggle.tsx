@@ -23,8 +23,8 @@ const ModeToggle = styled(Switch)(({ theme }) => ({
         },
       },
     },
-    '& .MuiSwitch-thumb': {//TODO: change the dark mode color
-      backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#ffb74d',
+    '& .MuiSwitch-thumb': {
+      backgroundColor: theme.palette.mode === 'dark' ? '#282b2e' : '#ffb74d',
       width: 32,
       height: 32,
       '&:before': {

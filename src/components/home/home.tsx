@@ -1,15 +1,23 @@
+import "./home.css";
 import Contact from "../contact/contact";
+import Education from "../education/education";
 import Experience from "../experience/experience";
 import Introduction from "../intro/introduction-component";
 import Skills from "../skills/skills";
+import Temp from "../temp/temp";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { useRef } from "react";
 
 export default function Home() {
+  const containerRef = useRef(null);
+
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div className="app">
       <Introduction />
-      <Skills></Skills>
-      <Experience></Experience>
-      <Contact></Contact>
+      <Skills />
+      <Education />
+      <Experience />
+      <Contact />
     </div>
   );
 }

@@ -1,9 +1,12 @@
 import "./introduction.css";
+import { init } from "ityped";
+import { useEffect, useRef } from "react";
+import MyPic from "../../assets/images/my-picture-transparent-bg.png";
+import DownArrow from "../../assets/images/down.png";
+import DownArrowWhite from "../../assets/images/down-white.png";
 import Avatar from "./avatar/avatar";
-import { Paper, Table, TableCell, TableRow, Typography } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
 import { useTheme, Theme } from "@mui/material/styles";
-import TextSwipe from "../common/text-swipe/text-swipe";
 
 const animationStyles = (theme: Theme) => {
   return {
@@ -15,48 +18,47 @@ const animationStyles = (theme: Theme) => {
     },
   };
 };
-export default function Introduction() {
+
+export default function Intro() {
+  const textRef = useRef<HTMLSpanElement>(null);
   const currentTheme = useTheme();
 
-  const fadeStyles = makeStyles(animationStyles(currentTheme))();
+  useEffect(() => {
+    // @ts-ignore
+    init(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      backSpeed: 60,
+      strings: ["Developer", "Designer", "Content Creator"],
+    });
+  }, []);
 
   return (
-    <Paper
-      elevation={3}
-      style={{
-        margin: "10%",
-        width: "80%",
-        height: "80%",
-        borderRadius: "10px",
-        padding: "5%",
-      }}
-    >
-      <Table
-        aria-label="simple table"
-        sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-      >
-        <TableRow>
-          <TableCell>
-            <Typography variant="h2" className={fadeStyles.hiText}>
-              Hi there..
-            </Typography>
-
-            <Typography
-              style={{
-                fontSize: "25px",
-                fontFamily: "'Nunito', sans-serif",
-                width: "170%",
-                fontWeight: 600,
-              }}
-            >
-              <TextSwipe />
-            </Typography>
-          </TableCell>
-          <TableCell align="right">
-            <Avatar />
-          </TableCell>
-        </TableRow>
-      </Table>
-    </Paper>
+    <div className="intro" id="intro">
+      <div className="left">
+        <div className="imgContainer">
+          <img src={MyPic} alt="" />
+        </div>
+      </div>
+      <div className="right">
+        <div className="wrapper">
+          <h2>
+            <span>Hi There</span>, I'm
+          </h2>
+          <h1>Nithyanantham</h1>
+          <h3>
+            I'm a <span ref={textRef}></span>
+          </h3>
+        </div>
+        <a href="#portfolio">
+          <img
+            src={
+              currentTheme.palette.mode === "light" ? DownArrow : DownArrowWhite
+            }
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
   );
 }

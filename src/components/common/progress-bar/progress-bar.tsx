@@ -6,6 +6,7 @@ const styles = (theme: Theme) => {
   return {
     root: {
       height: 10,
+      width:300,
       borderRadius: 5,
       backgroundColor:
         theme.palette.mode === "dark"

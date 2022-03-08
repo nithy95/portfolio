@@ -29,6 +29,7 @@ import themeOptions, {
   defaultPalette,
   lightThemeSuggestion,
   defaultTheme,
+  backgoroundPalette,
 } from "./constants/palettes";
 import { TitleTypography } from "./components/common/typographies/typographies";
 
@@ -51,9 +52,10 @@ function App() {
 
   useEffect(() => {
     const themeOption = themeOptions.get(currentPalette)!;
-    // const background = backgoroundPalette.get(mode);
-    // TODO: add backgorund below
-    const newThemeOption = { palette: { mode: mode, ...themeOption } };
+    const background = backgoroundPalette.get(mode);
+    const newThemeOption = {
+      palette: { mode: mode, ...themeOption, ...background },
+    };
 
     setCurrentTheme(createTheme(newThemeOption));
   }, [currentPalette, mode]);
@@ -110,16 +112,19 @@ function App() {
         />
         <TransparentAppBar>
           <Box sx={{ flexGrow: 1 }}>
-            <Toolbar sx={{ mt: 1.5 }}>
+            <Toolbar>
               <TitleTypography
-                variant="h3"
-                ml={40}
+                variant="h4"
                 sx={{ flexGrow: 1 }}
+                style={{
+                  fontSize: "40px",
+                  fontWeight: "bolder",
+                }}
                 color={(theme) => {
                   return theme.palette.primary.main;
                 }}
               >
-                nithY
+                _nithY_
               </TitleTypography>
               <ModeToggle
                 checked={mode === "dark"}
