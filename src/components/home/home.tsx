@@ -4,7 +4,6 @@ import Education from "../education/education";
 import Experience from "../experience/experience";
 import Introduction from "../intro/introduction-component";
 import Skills from "../skills/skills";
-import Temp from "../temp/temp";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 

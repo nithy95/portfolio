@@ -6,7 +6,6 @@ import { Body1Typography } from "../typographies/typographies";
 export const ElevatedCard: FunctionComponent<ElevatedCardProps> = ({
   title,
   children,
-  bg,
   id,
 }) => {
   return (
