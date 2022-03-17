@@ -1,3 +1,11 @@
-.toolbarButtons {
-  margin-left: "auto";
+.cursor {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

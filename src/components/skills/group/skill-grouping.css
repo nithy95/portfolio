@@ -1,0 +1,31 @@
+/* .skills-container-wrapper {
+    margin-top: 2%;
+  }
+  .skills-container {
+    display: inline-block;
+  } */
+
+.skill-block {
+  color: white;
+  width: 300px;
+  height: 40px;
+  margin: 5px;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px -8px #637381;
+}
+
+.skill-block i {
+  font-size: larger;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+@media (max-width: 768px) {
+  .skill-block {
+    width: 300px;
+  }
+}

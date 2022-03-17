@@ -32,6 +32,7 @@ import themeOptions, {
   backgoroundPalette,
 } from "./constants/palettes";
 import { TitleTypography } from "./components/common/typographies/typographies";
+import { makeStyles, lighten, darken } from "@material-ui/core";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme:light)");
@@ -45,6 +46,30 @@ function App() {
   const [currentPalette, setCurrentPalette] = useState(defaultColor);
 
   const anchorRef = useRef(null);
+
+  const timelineCssVariables = (theme: Theme) => {
+    return {
+      "@global": {
+        ":root": {
+          "--color-primary":
+            theme.palette.mode === "dark"
+              ? theme.palette.primary.dark
+              : theme.palette.primary.main,
+          "--color-secondary":
+            theme.palette.mode === "dark"
+              ? lighten(theme.palette.primary.dark, 0.2)
+              : darken(theme.palette.primary.light, 0.1),
+          "--timeline-img-color":
+            theme.palette.mode === "dark"
+              ? darken(theme.palette.primary.dark, 0.2)
+              : theme.palette.primary.main,
+          "--color-background": theme.palette.background.default,
+        },
+      },
+    };
+  };
+  // This injects global CSS variable into the App
+  makeStyles(timelineCssVariables(currentTheme))();
 
   useEffect(() => {
     setMode(prefersDarkMode ? "dark" : "light");
@@ -118,13 +143,12 @@ function App() {
                 sx={{ flexGrow: 1 }}
                 style={{
                   fontSize: "40px",
-                  fontWeight: "bolder",
                 }}
                 color={(theme) => {
                   return theme.palette.primary.main;
                 }}
               >
-                _nithY_
+                &gt;_nithY <span className="cursor">_</span>
               </TitleTypography>
               <ModeToggle
                 checked={mode === "dark"}

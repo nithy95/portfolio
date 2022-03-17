@@ -3,9 +3,8 @@ import { profile } from "../../constants/profile";
 import { ElevatedCard } from "../common/elevated-card/elevated-card";
 import { Body1Typography } from "../common/typographies/typographies";
 import SkillGroup from "./group/skill-grouping";
-import Skill, { SkillCategory } from "../../models/skills/skill.model";
+import { SkillCategory } from "../../models/skills/skill.model";
 import { useEffect, useState } from "react";
-import Slider from "react-slick";
 
 export default function Skills() {
   const settings = {
@@ -27,7 +26,6 @@ export default function Skills() {
 
   return (
     <ElevatedCard
-    // bg="#1939B7"
       title={
         <>
           Check out my skills...
@@ -45,21 +43,19 @@ export default function Skills() {
       }
       id="skills"
     >
-      <Slider {...settings}>
-        {skillListChunks.map((chunks) => {
-          return (
-            <div>
-              {chunks.map(({ category, skills }: SkillCategory) => {
-                return (
-                  <div className="skills-container">
-                    <SkillGroup category={category} skills={skills} />
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
-      </Slider>
+      {skillListChunks.map((chunks) => {
+        return (
+          <div>
+            {chunks.map(({ category, skills }: SkillCategory) => {
+              return (
+                <div className="skills-container">
+                  <SkillGroup category={category} skills={skills} />
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
     </ElevatedCard>
   );
 }

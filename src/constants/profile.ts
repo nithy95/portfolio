@@ -6,17 +6,14 @@ export const skillSet: SkillCategory[] = [
     skills: [
       { skill: "React", score: 70 },
       { skill: "React Native", score: 70 },
-      { skill: "JavaScript", score: 80 },
-      { skill: "TypeScript", score: 80 },
-      { skill: "Redux", score: 70 },
     ],
   },
   {
     category: "Back End",
     skills: [
-      { skill: "Java", score: 80 },
       { skill: "Spring Boot", score: 70 },
       { skill: "ExpressJs", score: 60 },
+      { skill: "Microservices", score: 80 },
     ],
   },
   {

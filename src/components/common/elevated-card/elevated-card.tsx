@@ -9,14 +9,7 @@ export const ElevatedCard: FunctionComponent<ElevatedCardProps> = ({
   id,
 }) => {
   return (
-    <section
-      // style={{
-      //   width: "100%",
-      //   minHeight: "100vh",
-      //   background: bg,
-      // }}
-      id={id}
-    >
+    <section id={`${id}`}>
       {title && (
         <>
           <Body1Typography
@@ -24,7 +17,6 @@ export const ElevatedCard: FunctionComponent<ElevatedCardProps> = ({
             color="text.primary"
             align="center"
             p="15px"
-            pt="40px"
           >
             {title}
           </Body1Typography>

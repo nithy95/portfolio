@@ -12,11 +12,21 @@ export default function Home() {
 
   return (
     <div className="app">
-      <Introduction />
-      <Skills />
-      <Education />
-      <Experience />
-      <Contact />
+      <div className="paper-bg">
+        <Introduction />
+      </div>
+      <div className="section">
+        <Skills />
+      </div>
+      <div className="section">
+        <Education />
+      </div>
+      <div className="section">
+        <Experience />
+      </div>
+      <div className="section">
+        <Contact />
+      </div>
     </div>
   );
 }

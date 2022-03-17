@@ -50,7 +50,7 @@ export default function Intro() {
             I'm a <span ref={textRef}></span>
           </h3>
         </div>
-        <a href="#portfolio">
+        <a>
           <img
             src={
               currentTheme.palette.mode === "light" ? DownArrow : DownArrowWhite
