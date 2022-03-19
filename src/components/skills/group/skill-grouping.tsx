@@ -2,12 +2,12 @@ import "./skill-grouping.css";
 import { Stack } from "@mui/material";
 import Skill from "../../../models/skills/skill.model";
 import { Body1Typography } from "../../common/typographies/typographies";
+import { Icon } from "@iconify/react";
 
 export default function SkillGroup(props: {
   category: string;
   skills: Skill[];
 }) {
-  // TODO: pick a color for header
   return (
     <Stack>
       <Body1Typography variant="h6">{props.category}</Body1Typography>
@@ -17,8 +17,15 @@ export default function SkillGroup(props: {
             <li>
               <div className="skill-block">
                 <span>
-                  <i className="fa fa-eercast" aria-hidden="true"></i>
-                  <span>{skill.skill}</span>
+                  <Icon
+                    icon="ic:round-gps-fixed"
+                    width="25"
+                    height="25"
+                    className="icon"
+                    color="white"
+                    inline={true}
+                  />
+                  {skill.skill}
                 </span>
               </div>
             </li>

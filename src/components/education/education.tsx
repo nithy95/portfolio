@@ -38,7 +38,7 @@ const Education = () => {
 
   return (
     <>
-      <ElevatedCard title={"My Education"}>
+      <ElevatedCard title={"My Education"} icon="gg:smartphone-chip">
         <VerticalTimeline
           lineColor={isDarkMode ? "white" : currentTheme.palette.grey[300]}
           // TODO: try to re animate every time the page scrolls

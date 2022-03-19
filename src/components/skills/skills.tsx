@@ -7,18 +7,6 @@ import { SkillCategory } from "../../models/skills/skill.model";
 import { useEffect, useState } from "react";
 
 export default function Skills() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    accessibility: true,
-    // adaptiveHeight: true,
-  };
-
   const [skillListChunks, setSkillListChunks] = useState<SkillCategory[][]>([]);
   useEffect(() => {
     setSkillListChunks(sliceIntoChunks(profile.professional.allSkills, 3));
@@ -26,22 +14,15 @@ export default function Skills() {
 
   return (
     <ElevatedCard
-      title={
+      title={"Check out my skills..."}
+      subtitle={
         <>
-          Check out my skills...
-          <br />
-          <Body1Typography
-            variant="caption"
-            color="text.primary"
-            align="center"
-          >
-            <span style={{ color: "red" }}>*</span>These points are the average
-            of all the points that I received from various interviewers and SMEs
-            over the course of my career.
-          </Body1Typography>
+          <span style={{ color: "red" }}>*</span>These points are the average of
+          all the points that I received from various interviewers and SMEs over
+          the course of my career.
         </>
       }
-      id="skills"
+      icon="gg:smartphone-chip"
     >
       {skillListChunks.map((chunks) => {
         return (

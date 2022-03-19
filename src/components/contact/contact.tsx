@@ -18,11 +18,11 @@ import GitHubIcon from "../common/icons/github";
 import LinkedInIcon from "../common/icons/linkedin";
 import InstagramIcon from "../common/icons/instagram";
 import DownloadIcon from "../common/icons/download";
-import { useTheme, Theme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialMediaIconButton from "../common/buttons/social-media-icon-button";
 import FacebookIcon from "../common/icons/facebook";
-import Divider from "@mui/material/Divider";
+// import { Icon } from "@iconify/react";
 
 // Icons used from https://icons8.com/icon/set/social-media/fluency-systems-regular
 
@@ -49,9 +49,8 @@ export default function Contact() {
   const currentTheme = useTheme();
 
   const downloadButtonStyles = makeStyles(animationStyles(downloadAnimation))();
-
   return (
-    <ElevatedCard title={"Hire Me"}>
+    <ElevatedCard title={"Let's get in touch..."} icon="tabler:messages">
       <div className="contact">
         <div className="contact-container">
           <ul>
@@ -92,6 +91,14 @@ export default function Contact() {
             <li className="social-bar">
               <a href={contact.linkedIn} target="_blank">
                 <SocialMediaIconButton>
+                  {/* <Icon
+                    icon="jam:linkedin-square"
+                    width="35"
+                    height="35"
+                    className="icon"
+                    color={currentTheme.palette.primary.main}
+                    inline={true}
+                  /> */}
                   <LinkedInIcon
                     fontSize="large"
                     color={currentTheme.palette.primary.main}
@@ -102,6 +109,14 @@ export default function Contact() {
             <li className="social-bar">
               <a href={contact.gitHub} target="_blank">
                 <SocialMediaIconButton>
+                  {/* <Icon
+                    icon="jam:github-square"
+                    width="35"
+                    height="35"
+                    className="icon"
+                    color={currentTheme.palette.primary.main}
+                    inline={true}
+                  /> */}
                   <GitHubIcon
                     fontSize="large"
                     color={currentTheme.palette.primary.main}
@@ -112,6 +127,14 @@ export default function Contact() {
             <li className="social-bar">
               <a href={contact.medium} target="_blank">
                 <SocialMediaIconButton>
+                  {/* <Icon
+                    icon="jam:medium-square"
+                    width="35"
+                    height="35"
+                    className="icon"
+                    color={currentTheme.palette.primary.main}
+                    inline={true}
+                  /> */}
                   <MediumIcon
                     fontSize="large"
                     color={currentTheme.palette.primary.main}
@@ -119,10 +142,17 @@ export default function Contact() {
                 </SocialMediaIconButton>
               </a>
             </li>
-            {/* <Divider orientation="vertical" flexItem /> */}
             <li className="social-bar">
               <a href={contact.instagram} target="_blank">
                 <SocialMediaIconButton>
+                  {/* <Icon
+                    icon="jam:instagram"
+                    width="35"
+                    height="35"
+                    className="icon"
+                    color={currentTheme.palette.primary.main}
+                    inline={true}
+                  /> */}
                   <InstagramIcon
                     fontSize="large"
                     color={currentTheme.palette.primary.main}
@@ -133,6 +163,14 @@ export default function Contact() {
             <li className="social-bar">
               <a href={contact.instagram} target="_blank">
                 <SocialMediaIconButton>
+                  {/* <Icon
+                    icon="jam:facebook-square"
+                    width="35"
+                    height="35"
+                    className="icon"
+                    color={currentTheme.palette.primary.main}
+                    inline={true}
+                  /> */}
                   <FacebookIcon
                     fontSize="large"
                     color={currentTheme.palette.primary.main}
@@ -149,6 +187,14 @@ export default function Contact() {
                       setDownloadAnimation("none");
                     }}
                   >
+                    {/* <Icon
+                      icon="lucide:download"
+                      width="35"
+                      height="35"
+                      className="icon"
+                      color={currentTheme.palette.primary.main}
+                      inline={true}
+                    /> */}
                     <DownloadIcon
                       fontSize="large"
                       color={currentTheme.palette.primary.main}

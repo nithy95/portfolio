@@ -4,67 +4,67 @@ export const skillSet: SkillCategory[] = [
   {
     category: "Front End",
     skills: [
-      { skill: "React", score: 70 },
-      { skill: "React Native", score: 70 },
+      { skill: "React", score: 70, icon: "bxl:react" },
+      { skill: "React Native", score: 70, icon: "bxl:react" },
     ],
   },
   {
     category: "Back End",
     skills: [
-      { skill: "Spring Boot", score: 70 },
-      { skill: "ExpressJs", score: 60 },
-      { skill: "Microservices", score: 80 },
+      { skill: "Spring Boot", score: 70, icon: "bxl:spring-boot" },
+      { skill: "ExpressJs", score: 60, icon: "bxl:javascript" },
+      { skill: "Microservices", score: 80, icon: "carbon:edge-cluster" },
     ],
   },
   {
     category: "Security",
     skills: [
-      { skill: "Spring Security", score: 60 },
-      { skill: "Okta", score: 60 },
+      { skill: "Spring Security", score: 60, icon: "bxl:spring-boot" },
+      { skill: "Okta", score: 60, icon: "simple-icons:okta" },
     ],
   },
   {
     category: "Build Tools",
     skills: [
-      { skill: "Maven", score: 70 },
-      { skill: "Gradle", score: 60 },
-      { skill: "Webpack", score: 60 },
+      { skill: "Maven", score: 70, icon: "simple-icons:apachemaven" },
+      { skill: "Gradle", score: 60, icon: "simple-icons:gradle" },
+      { skill: "Webpack", score: 60, icon: "simple-icons:webpack" },
     ],
   },
   {
     category: "CICD",
     skills: [
-      { skill: "Sonar Qube", score: 60 },
-      { skill: "Jenkins", score: 60 },
-      { skill: "Argo CD", score: 70 },
+      { skill: "Sonar Qube", score: 60, icon: "simple-icons:sonarqube" },
+      { skill: "Jenkins", score: 60, icon: "simple-icons:jenkins" },
+      { skill: "Argo CD", score: 70, icon: "logos:argo-icon" },
     ],
   },
   {
     category: "Containerization",
     skills: [
-      { skill: "Kubernetes", score: 60 },
-      { skill: "Docker", score: 80 },
-      { skill: "ECS", score: 80 },
+      { skill: "Kubernetes", score: 60, icon: "simple-icons:kubernetes" },
+      { skill: "Docker", score: 80, icon: "bxl:docker" },
+      { skill: "ECS", score: 80, icon: "bxl:react" },
     ],
   },
   {
     category: "Artifactories & Repositories",
     skills: [
-      { skill: "JFrog", score: 60 },
-      { skill: "Quay", score: 60 },
-      { skill: "Git", score: 60 },
+      { skill: "JFrog", score: 60, icon: "simple-icons:jfrog" },
+      { skill: "Quay", score: 60, icon: "logos:quay" },
+      { skill: "Git", score: 60, icon: "bxl:git" },
     ],
   },
   {
     category: "Orchestration Tools",
     skills: [
-      { skill: "Terraform", score: 70 },
-      { skill: "CloudFormation", score: 70 },
+      { skill: "Terraform", score: 70, icon: "simple-icons:terraform" },
+      { skill: "CloudFormation", score: 70, icon: "ph:file-cloud-bold" },
     ],
   },
   {
     category: "Cloud",
-    skills: [{ skill: "AWS", score: 80 }],
+    skills: [{ skill: "AWS", score: 80, icon: "bxl:aws" }],
   },
 ];
 

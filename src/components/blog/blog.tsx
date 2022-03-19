@@ -1,52 +1,65 @@
-import "./testimonials.scss";
+// import { Icon } from "@iconify/react";
+// import plusFill from "@iconify/icons-eva/plus-fill";
+// import { Link as RouterLink } from "react-router-dom";
+// material
+import { Grid, Button, Container, Stack, Typography } from "@mui/material";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import MediumArticle from "../../models/blog/medium.blog";
+import { ElevatedCard } from "../common/elevated-card/elevated-card";
+import { Body1Typography } from "../common/typographies/typographies";
+import BlogPostCard from "./blog-card/blog-post";
+// components
+// import Page from "../components/Page";
+// import {
+//   BlogPostCard,
+//   BlogPostsSort,
+//   BlogPostsSearch,
+// } from "../components/_dashboard/blog";
+//
+// import POSTS from "../_mocks_/blog";
 
-export default function Testimonials() {
-  const data = [
-    {
-      id: 1,
-      name: "Tom Durden",
-      title: "Senior Developer",
-      img: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/twitter.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
-    },
-    {
-      id: 2,
-      name: "Alex Kalinski",
-      title: "Co-Founder of DELKA",
-      img: "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/youtube.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
-      featured: true,
-    },
-    {
-      id: 3,
-      name: "Martin Harold",
-      title: "CEO of ALBI",
-      img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/linkedin.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
-    },
-  ];
+// ----------------------------------------------------------------------
+
+const SORT_OPTIONS = [
+  { value: "latest", label: "Latest" },
+  { value: "popular", label: "Popular" },
+  { value: "oldest", label: "Oldest" },
+];
+
+// ----------------------------------------------------------------------
+
+export default function Blog() {
+  const [blogs, setBlogs] = useState<MediumArticle[]>([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@nithy.official95"
+      )
+      .then((response) => {
+        let posts: MediumArticle[] = response.data.items;
+        setBlogs([
+          ...posts,
+          ...posts,
+          ...posts,
+          ...posts,
+          ...posts,
+          ...posts,
+          ...posts,
+          ...posts,
+        ]);
+      });
+  });
   return (
-    <div className="testimonials" id="testimonials">
-      <h1>Testimonials</h1>
-      <div className="container">
-        {data.map((d) => (
-          <div className={d.featured ? "card featured" : "card"}>
-            <div className="top">
-              <img src="assets/right-arrow.png" className="left" alt="" />
-              <img className="user" src={d.img} alt="" />
-              <img className="right" src={d.icon} alt="" />
-            </div>
-            <div className="center">{d.desc}</div>
-            <div className="bottom">
-              <h3>{d.name}</h3>
-              <h4>{d.title}</h4>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <ElevatedCard title={"Check out my my blog"} icon="blog">
+      <Container style={{ marginTop: 50 }}>
+        <Grid container spacing={3}>
+          {blogs.map((post, index) => (
+            <BlogPostCard key={post.guid} post={post} index={index} />
+          ))}
+        </Grid>
+      </Container>
+    </ElevatedCard>
   );
 }

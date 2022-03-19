@@ -11,7 +11,10 @@ const TransparentAppBar = styled(AppBar)(({ theme }) => ({
   WebkitBackdropFilter: "blur(6px)", // Fix on Mobile
   padding: theme.spacing(0, 3),
   boxShadow: "none",
-  backgroundColor: "transparent",
+  backgroundColor: `${alpha(
+    theme.palette.mode === "dark" ? "#343a40" : "#fff",
+    0.2
+  )}`,
   [theme.breakpoints.up("md")]: {
     height: APPBAR_DESKTOP,
     padding: theme.spacing(0, 5),

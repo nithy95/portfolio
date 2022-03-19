@@ -143,6 +143,7 @@ function App() {
                 sx={{ flexGrow: 1 }}
                 style={{
                   fontSize: "40px",
+                  overflow: "hidden",
                 }}
                 color={(theme) => {
                   return theme.palette.primary.main;

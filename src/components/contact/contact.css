@@ -22,4 +22,5 @@
 
 .social-bar {
   margin: 30px 30px 0;
+  overflow: hidden;
 }

@@ -22,6 +22,7 @@
   align-items: flex-end;
   justify-content: center;
   float: right;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
   .intro .left .imgContainer {
