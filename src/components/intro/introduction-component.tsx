@@ -29,7 +29,7 @@ export default function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ["Developer", "Designer", "Content Creator"],
+      strings: ["Developer", "Systems Designer", "Content Creator"],
     });
   }, []);
 
@@ -45,7 +45,7 @@ export default function Intro() {
           <h2>
             <span>Hi There</span>, I'm
           </h2>
-          <h1>Nithyanantham</h1>
+          <h1>Nithyanantham G</h1>
           <h3>
             I'm a <span ref={textRef}></span>
           </h3>

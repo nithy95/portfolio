@@ -1,6 +1,7 @@
 .intro {
   display: flex;
   height: 100vh;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
   .intro {
@@ -29,17 +30,22 @@
     align-items: flex-start;
   }
 }
+
 .intro .left .imgContainer img {
   height: 90%;
 }
+
 @media (max-width: 768px) {
   .intro .left .imgContainer img {
     height: 50%;
+    margin-top: 8px;
+    /* TODO: Need to figure out a way to make the image sit on the border for all devices */
   }
 }
 .intro .right {
   flex: 0.5;
   position: relative;
+  font-family: "Nunito", sans-serif;
 }
 .intro .right .wrapper {
   width: 100%;

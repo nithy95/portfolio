@@ -52,39 +52,37 @@ export default function Contact() {
   return (
     <ElevatedCard title={"Let's get in touch..."} icon="tabler:messages">
       <div className="contact">
-        <div className="contact-container">
-          <ul>
-            <li>
-              <Typography variant="h6">
-                You have a project in mind and you're looking for someone who
-                has diverse set of skills, contact me @
-              </Typography>
-            </li>
-            <li>
-              <OutlinedInput
-                type="text"
-                value={contact.email}
-                size="small"
-                disabled
-                sx={{ width: "30ch", ml: "5px" }}
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      onClick={() => {
-                        copy(contact.email);
-                        setOpen(true);
-                      }}
-                      onMouseDown={(event) => event.preventDefault()}
-                      edge="end"
-                    >
-                      <ContentCopy />
-                    </IconButton>
-                  </InputAdornment>
-                }
-              />
-            </li>
-          </ul>
+        <div className="contact-pitch-container">
+          <Typography className="contact-pitch">
+            Found my profile to be interesting? and you have an interesting role
+            for me? I'd be glad to discuss further details with you.
+          </Typography>
+          <Typography className="contact-pitch">
+            Contact me @
+            <OutlinedInput
+              type="text"
+              value={contact.email}
+              size="small"
+              disabled
+              sx={{ width: "30ch", ml: "5px" }}
+              className="copy-text"
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={() => {
+                      copy(contact.email);
+                      setOpen(true);
+                    }}
+                    onMouseDown={(event) => event.preventDefault()}
+                    edge="end"
+                  >
+                    <ContentCopy />
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </Typography>
         </div>
         <div className="contact-container">
           <ul>

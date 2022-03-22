@@ -1,5 +1,5 @@
 .contact {
-  margin: 5%;
+  margin: 1% 5% 5% 5%;
   display: block;
   justify-content: center;
   align-items: center;
@@ -10,9 +10,10 @@
   justify-content: center;
   align-items: center;
 }
+
 .contact-container ul {
   width: fit-content;
-  list-style: "none";
+  list-style: none;
 }
 
 .contact-container ul li {
@@ -23,4 +24,29 @@
 .social-bar {
   margin: 30px 30px 0;
   overflow: hidden;
+}
+
+.copy-text {
+  width: 260px;
+  font-size: 1rem;
+}
+
+.contact-pitch {
+  font-size: 1.25rem;
+  list-style: none;
+  padding-top: 2%;
+}
+
+@media (max-width: 768px) {
+  .contact-pitch {
+    font-size: 1.1rem;
+  }
+  .copy-text {
+    width: 260px;
+    font-size: 1rem;
+  }
+}
+
+.contact-pitch-container {
+  text-align: center;
 }

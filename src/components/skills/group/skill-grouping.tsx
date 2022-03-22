@@ -22,7 +22,7 @@ export default function SkillGroup(props: {
                     width="25"
                     height="25"
                     className="icon"
-                    color="white"
+                    color="#ffffffe6"
                     inline={true}
                   />
                   {skill.skill}
