@@ -40,7 +40,12 @@ export default function Intro() {
           <img src={MyPic} alt="" />
         </div>
       </div>
-      <div className="right">
+      <div
+        className="right"
+        style={{
+          color: currentTheme.palette.mode === "dark" ? "#fff" : "#565758",
+        }}
+      >
         <div className="wrapper">
           <h2>
             <span>Hi there</span>, I'm

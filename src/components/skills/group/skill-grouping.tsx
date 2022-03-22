@@ -3,14 +3,19 @@ import { Stack } from "@mui/material";
 import Skill from "../../../models/skills/skill.model";
 import { Body1Typography } from "../../common/typographies/typographies";
 import { Icon } from "@iconify/react";
+import { Theme, useTheme } from "@mui/material/styles";
+import { fontColor } from "../../../utils/color";
 
 export default function SkillGroup(props: {
   category: string;
   skills: Skill[];
 }) {
+  const currentTheme = useTheme();
   return (
     <Stack>
-      <Body1Typography variant="h6">{props.category}</Body1Typography>
+      <Body1Typography variant="h6" style={{ color: fontColor(currentTheme) }}>
+        {props.category}
+      </Body1Typography>
       <ul style={{ listStyle: "none", padding: 0 }}>
         {props.skills.map((skill) => {
           return (

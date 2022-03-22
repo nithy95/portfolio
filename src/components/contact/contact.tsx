@@ -77,7 +77,14 @@ export default function Contact() {
                     onMouseDown={(event) => event.preventDefault()}
                     edge="end"
                   >
-                    <ContentCopy />
+                    <ContentCopy
+                      style={{
+                        color:
+                          currentTheme.palette.mode === "dark"
+                            ? "#ffffffb3"
+                            : "#00000061",
+                      }}
+                    />
                   </IconButton>
                 </InputAdornment>
               }
