@@ -76,18 +76,22 @@
 .intro .right .wrapper h3 {
   font-size: 30px;
 }
+
 @media (max-width: 768px) {
   .intro .right .wrapper h3 {
     font-size: 20px;
   }
 }
+
 .intro .right .wrapper h3 span {
   font-size: inherit;
   color: var(--color-primary);
 }
+
 .intro .right .wrapper h3 .ityped-cursor {
   animation: blink 1s infinite;
 }
+
 @keyframes blink {
   50% {
     opacity: 1;
@@ -105,8 +109,40 @@
   width: 30px;
   animation: arrowBlink 2s infinite;
 }
+
 @keyframes arrowBlink {
   100% {
     opacity: 0;
   }
+}
+
+.intro .right .wrapper p {
+  font-size: 14px;
+  padding-top: 20px;
+  text-align: start;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .intro .right .wrapper p {
+    text-align: center;
+  }
+}
+
+.intro .right .wrapper Button {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  margin-top: 4%;
+  box-shadow: 0px 0px 15px -8px #3c3e41;
+  font-family: "Nunito", sans-serif;
+}
+
+.intro .right .wrapper .hire-me {
+  background-color: var(--color-primary);
+}
+
+.intro .right .wrapper .know-more {
+  margin-left: 50px;
+  background-color: #565758;
 }

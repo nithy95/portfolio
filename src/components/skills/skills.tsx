@@ -17,12 +17,15 @@ export default function Skills() {
       title={"Check out my skills..."}
       subtitle={
         <>
-          <span style={{ color: "red" }}>*</span>These points are the average of
+          {/* <span style={{ color: "red" }}>*</span>These points are the average of
           all the points that I received from various interviewers and SMEs over
-          the course of my career.
+          the course of my career. */}
+          These are the few Technologies , languages and frameworks that i grind
+          on a regular basis..
         </>
       }
-      icon="gg:smartphone-chip"
+      icon="ion:hardware-chip-outline"
+      // iconStyle={data-rotate:"180deg"}
     >
       {skillListChunks.map((chunks) => {
         return (

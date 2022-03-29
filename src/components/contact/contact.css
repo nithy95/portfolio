@@ -1,14 +1,15 @@
 .contact {
-  margin: 1% 5% 5% 5%;
-  display: block;
-  justify-content: center;
-  align-items: center;
+  margin: 1% 5% 1% 5%;
 }
 
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contact-pitch-container {
+  text-align: center;
 }
 
 .contact-container ul {
@@ -37,6 +38,11 @@
   padding-top: 2%;
 }
 
+.copy-write {
+  margin-top: 2%;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
 @media (max-width: 768px) {
   .contact-pitch {
     font-size: 1.1rem;
@@ -45,8 +51,4 @@
     width: 260px;
     font-size: 1rem;
   }
-}
-
-.contact-pitch-container {
-  text-align: center;
 }

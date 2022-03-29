@@ -4,7 +4,7 @@ import VerticalTimeline from "../common/vertical-timeline/vertical-timeline";
 
 export default function Experience() {
   return (
-    <ElevatedCard title={"My professional journey..."} icon="ic:twotone-work-outline">
+    <ElevatedCard title={"My professional journey..."} icon="iconoir:large-suitcase">
       <VerticalTimeline workItems={profile.professional.experiences} />
     </ElevatedCard>
   );

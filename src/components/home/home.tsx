@@ -4,17 +4,19 @@ import Experience from "../experience/experience";
 import Introduction from "../intro/introduction";
 import Skills from "../skills/skills";
 import { useRef } from "react";
-import Blogs from "../blog/blog";
 
 export default function Home() {
-  const containerRef = useRef(null);
-
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
   return (
     <div className="app">
       <div className="paper-bg">
-        <Introduction />
+        <Introduction skillsRef={skillsRef} contactRef={contactRef} />
       </div>
-      <div className="section">
+      {/* <div className="section">
+        <MyStory />
+      </div> */}
+      <div className="section" ref={skillsRef}>
         <Skills />
       </div>
       <div className="section">
@@ -23,7 +25,7 @@ export default function Home() {
       {/* <div className="section">
         <Blogs />
       </div> */}
-      <div className="section">
+      <div className="section" ref={contactRef}>
         <Contact />
       </div>
     </div>

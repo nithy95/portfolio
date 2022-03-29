@@ -50,12 +50,15 @@ export default function Contact() {
 
   const downloadButtonStyles = makeStyles(animationStyles(downloadAnimation))();
   return (
-    <ElevatedCard title={"Let's get in touch..."} icon="tabler:messages">
+    <ElevatedCard title={"Let's get in touch..."} icon="iconoir:message-text">
       <div className="contact">
         <div className="contact-pitch-container">
           <Typography className="contact-pitch">
-            Found my profile to be interesting? and you have an interesting role
-            for me? I'd be glad to discuss further details with you.
+            {/* Found my profile to be interesting? and you have an interesting role
+            for me? I'd be glad to discuss further details with you. */}
+            Wanna build a Websites or an App? Aspiring to be a developer, but no
+            idea how to start? Wanna Collaborate or pitch in for some Fun/Real
+            projects? I'd be glad to discuss further details with you.
           </Typography>
           <Typography className="contact-pitch">
             Contact me @
@@ -209,6 +212,17 @@ export default function Contact() {
               </Tooltip>
             </li>
           </ul>
+        </div>
+        <div className="contact-container copy-write">
+          © Copyright 2022&nbsp;
+          <span
+            style={{
+              color: currentTheme.palette.primary.main,
+            }}
+          >
+            Nithy
+          </span>
+          . All rights reserved.
         </div>
       </div>
       <Snackbar

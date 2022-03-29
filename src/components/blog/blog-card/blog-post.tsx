@@ -14,12 +14,11 @@ import {
   Typography,
   CardContent,
 } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
-
+// import { Link as RouterLink } from "react-router-dom";
 //
-import { format } from "date-fns";
-import { replace } from "lodash";
-import numeral from "numeral";
+// import { format } from "date-fns";
+// import { replace } from "lodash";
+// import numeral from "numeral";
 import MediumArticle from "../../../models/blog/medium.blog";
 
 // ----------------------------------------------------------------------
@@ -45,11 +44,11 @@ export function SvgIconStyle({ src, color = "inherit", sx }: any) {
 }
 
 export function fDate(date: any) {
-  return format(new Date(date), "dd MMMM yyyy");
+  // return format(new Date(date), "dd MMMM yyyy");
 }
 
 export function fShortenNumber(number: any) {
-  return replace(numeral(number).format("0.00a"), ".00", "");
+  // return replace(numeral(number).format("0.00a"), ".00", "");
 }
 
 const CardMediaStyle = styled("div")({
@@ -205,7 +204,7 @@ export default function BlogPostCard({
               display: "block",
             }}
           >
-            {fDate(pubDate)}
+            {/* {fDate(pubDate)} */}
           </Typography>
 
           <TitleStyle
