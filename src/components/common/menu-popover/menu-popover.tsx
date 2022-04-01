@@ -16,8 +16,7 @@ const ArrowStyle = styled("span")(({ theme }) => ({
     position: "absolute",
     borderRadius: "0 0 4px 0",
     transform: "rotate(-135deg)",
-    //TODO: find a way to do this from theme, using theme.palette.background.default
-    background: theme.palette.mode === "dark" ? "#424242" : "#fff",
+    background: theme.palette.background.default,
     borderRight: `solid 1px ${alpha(theme.palette.grey[500], 0.12)}`,
     borderBottom: `solid 1px ${alpha(theme.palette.grey[500], 0.12)}`,
   },

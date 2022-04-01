@@ -1,8 +1,7 @@
 import "./skills.css";
 import { profile } from "../../constants/profile";
 import { ElevatedCard } from "../common/elevated-card/elevated-card";
-import { Body1Typography } from "../common/typographies/typographies";
-import SkillGroup from "./group/skill-grouping";
+import SkillCard from "./group/skill-card";
 import { SkillCategory } from "../../models/skills/skill.model";
 import { useEffect, useState } from "react";
 
@@ -25,7 +24,6 @@ export default function Skills() {
         </>
       }
       icon="ion:hardware-chip-outline"
-      // iconStyle={data-rotate:"180deg"}
     >
       {skillListChunks.map((chunks) => {
         return (
@@ -33,7 +31,7 @@ export default function Skills() {
             {chunks.map(({ category, skills }: SkillCategory) => {
               return (
                 <div className="skills-container">
-                  <SkillGroup category={category} skills={skills} />
+                  <SkillCard category={category} skills={skills} />
                 </div>
               );
             })}

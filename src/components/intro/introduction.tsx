@@ -4,19 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import MyPic from "../../assets/images/my-picture-transparent-bg.png";
 import DownArrow from "../../assets/images/down.png";
 import DownArrowWhite from "../../assets/images/down-white.png";
-import { useTheme, Theme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import { Button, useMediaQuery } from "@mui/material";
-
-const animationStyles = (theme: Theme) => {
-  return {
-    hiText: {
-      animation: "bounce 2.5s linear infinite",
-      color: theme.palette.primary.main,
-      fontFamily: "'Nunito', sans-serif;",
-      fontWeight: 600,
-    },
-  };
-};
 
 export default function Intro(props: any) {
   const mobileDeviceQuery = useMediaQuery("(max-width:768px)");
@@ -40,7 +29,7 @@ export default function Intro(props: any) {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ["Developer", "Systems Designer", "Content Creator"],
+      strings: ["Fullstack Developer", "Systems Designer", "Content Creator"],
     });
   }, []);
 
@@ -89,7 +78,6 @@ export default function Intro(props: any) {
               <Button
                 className="hire-me"
                 onClick={() => handleScroll("contact")}
-                // style={{ fontFamily: '"Nunito", sans-serif' }}
               >
                 Hire Me
               </Button>
@@ -102,16 +90,14 @@ export default function Intro(props: any) {
             </div>
           )}
         </div>
-        <a>
-          <img
-            style={{ cursor: "pointer" }}
-            src={
-              currentTheme.palette.mode === "light" ? DownArrow : DownArrowWhite
-            }
-            alt=""
-            onClick={() => handleScroll("skills")}
-          />
-        </a>
+        <img
+          style={{ cursor: "pointer" }}
+          src={
+            currentTheme.palette.mode === "light" ? DownArrow : DownArrowWhite
+          }
+          alt=""
+          onClick={() => handleScroll("skills")}
+        />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@
   margin-top: 90px;
   width: 700px;
   height: 700px;
-  background-color: var(--color-primary);
+  background-color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: flex-end;
@@ -85,7 +85,7 @@
 
 .intro .right .wrapper h3 span {
   font-size: inherit;
-  color: var(--color-primary);
+  color: var(--primary-color);
 }
 
 .intro .right .wrapper h3 .ityped-cursor {
@@ -100,12 +100,11 @@
     opacity: 0;
   }
 }
-.intro .right a {
+
+.intro .right img {
   position: absolute;
   bottom: 10px;
   left: 40%;
-}
-.intro .right a img {
   width: 30px;
   animation: arrowBlink 2s infinite;
 }
@@ -139,7 +138,7 @@
 }
 
 .intro .right .wrapper .hire-me {
-  background-color: var(--color-primary);
+  background-color: var(--primary-color);
 }
 
 .intro .right .wrapper .know-more {

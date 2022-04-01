@@ -1,5 +1,4 @@
 import { AppBar, styled } from "@mui/material";
-import { grey } from "@mui/material/colors";
 import { alpha } from "@mui/system";
 
 const APPBAR_MOBILE = 64;

@@ -30,7 +30,7 @@ import themeOptions, {
   lightThemeSuggestion,
   defaultTheme,
   backgoroundPalette,
-} from "./constants/palettes";
+} from "./theme/palette";
 import { TitleTypography } from "./components/common/typographies/typographies";
 import { makeStyles, lighten, darken } from "@material-ui/core";
 
@@ -51,11 +51,11 @@ function App() {
     return {
       "@global": {
         ":root": {
-          "--color-primary":
+          "--primary-color":
             theme.palette.mode === "dark"
               ? theme.palette.primary.dark
               : theme.palette.primary.main,
-          "--color-secondary":
+          "--secondary-color":
             theme.palette.mode === "dark"
               ? lighten(theme.palette.primary.dark, 0.2)
               : darken(theme.palette.primary.light, 0.1),
@@ -63,7 +63,7 @@ function App() {
             theme.palette.mode === "dark"
               ? darken(theme.palette.primary.dark, 0.2)
               : theme.palette.primary.main,
-          "--color-background": theme.palette.background.default,
+          "--background-color": theme.palette.background.default,
         },
       },
     };

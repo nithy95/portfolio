@@ -4,8 +4,8 @@
 
 .paper-bg {
   background-image: radial-gradient(
-    var(--color-primary) 0.75px,
-    var(--color-background) 0.75px
+    var(--primary-color) 0.75px,
+    var(--background-color) 0.75px
   );
   background-size: 10px 10px;
 }

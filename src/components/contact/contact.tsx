@@ -97,7 +97,7 @@ export default function Contact() {
         <div className="contact-container">
           <ul>
             <li className="social-bar">
-              <a href={contact.linkedIn} target="_blank">
+              <a href={contact.linkedIn} target="_blank" rel="noreferrer">
                 <SocialMediaIconButton>
                   {/* <Icon
                     icon="jam:linkedin-square"
@@ -115,7 +115,7 @@ export default function Contact() {
               </a>
             </li>
             <li className="social-bar">
-              <a href={contact.gitHub} target="_blank">
+              <a href={contact.gitHub} target="_blank" rel="noreferrer">
                 <SocialMediaIconButton>
                   {/* <Icon
                     icon="jam:github-square"
@@ -133,7 +133,7 @@ export default function Contact() {
               </a>
             </li>
             <li className="social-bar">
-              <a href={contact.medium} target="_blank">
+              <a href={contact.medium} target="_blank" rel="noreferrer">
                 <SocialMediaIconButton>
                   {/* <Icon
                     icon="jam:medium-square"
@@ -151,7 +151,7 @@ export default function Contact() {
               </a>
             </li>
             <li className="social-bar">
-              <a href={contact.instagram} target="_blank">
+              <a href={contact.instagram} target="_blank" rel="noreferrer">
                 <SocialMediaIconButton>
                   {/* <Icon
                     icon="jam:instagram"
@@ -169,7 +169,7 @@ export default function Contact() {
               </a>
             </li>
             <li className="social-bar">
-              <a href={contact.instagram} target="_blank">
+              <a href={contact.instagram} target="_blank" rel="noreferrer">
                 <SocialMediaIconButton>
                   {/* <Icon
                     icon="jam:facebook-square"

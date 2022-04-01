@@ -1,12 +1,12 @@
-import "./skill-grouping.css";
+import "./skill-card.css";
 import { Stack } from "@mui/material";
 import Skill from "../../../models/skills/skill.model";
 import { Body1Typography } from "../../common/typographies/typographies";
 import { Icon } from "@iconify/react";
-import { Theme, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import { fontColor } from "../../../utils/color";
 
-export default function SkillGroup(props: {
+export default function SkillCard(props: {
   category: string;
   skills: Skill[];
 }) {

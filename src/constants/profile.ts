@@ -81,6 +81,7 @@ export const profile = {
       instagram: "https://www.instagram.com/__nithy_",
     },
     education: [
+      // TODO: Introduce education comoponent in the future.
       {
         role: "Higher Secondary",
         organization: "Govt. Boys Hr. School",
@@ -95,10 +96,6 @@ export const profile = {
         skills: [],
         duration: "Apr 2012 - May 2016",
       },
-      // {
-      //   title:"Higher Secondary",
-      //   description:"Govt. Boys Hr. School - Apr 2011 - Mar 2012"
-      // }
     ],
   },
   professional: {
