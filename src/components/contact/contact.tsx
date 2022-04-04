@@ -1,5 +1,5 @@
 import "./contact.css";
-import { Alert, Snackbar, Typography, Tooltip, Divider } from "@mui/material";
+import { Alert, Snackbar, Typography, Tooltip } from "@mui/material";
 import { profile } from "../../constants/profile";
 import { ElevatedCard } from "../common/elevated-card/elevated-card";
 import { useState } from "react";
