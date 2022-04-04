@@ -1,17 +1,7 @@
 import "./contact.css";
-import { ContentCopy } from "@mui/icons-material";
-import {
-  OutlinedInput,
-  InputAdornment,
-  IconButton,
-  Alert,
-  Snackbar,
-  Typography,
-  Tooltip,
-} from "@mui/material";
+import { Alert, Snackbar, Typography, Tooltip, Divider } from "@mui/material";
 import { profile } from "../../constants/profile";
 import { ElevatedCard } from "../common/elevated-card/elevated-card";
-import copy from "copy-to-clipboard";
 import { useState } from "react";
 import MediumIcon from "../common/icons/medium";
 import GitHubIcon from "../common/icons/github";
@@ -22,8 +12,8 @@ import { useTheme } from "@mui/material/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialMediaIconButton from "../common/buttons/social-media-icon-button";
 import FacebookIcon from "../common/icons/facebook";
-// import { Icon } from "@iconify/react";
-
+import { Icon } from "@iconify/react";
+import CopyContentInput from "../common/copy-content-box/copy-content-input-box";
 // Icons used from https://icons8.com/icon/set/social-media/fluency-systems-regular
 
 const animationStyles = (animation: string) => {
@@ -40,15 +30,17 @@ export default function Contact() {
   const [downloadAnimation, setDownloadAnimation] = useState(
     "tada 2.5s linear infinite"
   );
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   const contact = profile.personal.contact;
 
   const currentTheme = useTheme();
 
   const downloadButtonStyles = makeStyles(animationStyles(downloadAnimation))();
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <ElevatedCard title={"Let's get in touch..."} icon="iconoir:message-text">
       <div className="contact">
@@ -61,39 +53,42 @@ export default function Contact() {
             projects? I'd be glad to discuss further details with you.
           </Typography>
           <Typography className="contact-pitch">
-            Contact me @
-            <OutlinedInput
-              type="text"
-              value={contact.email}
-              size="small"
-              disabled
-              sx={{ width: "30ch", ml: "5px" }}
-              className="copy-text"
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={() => {
-                      copy(contact.email);
-                      setOpen(true);
-                    }}
-                    onMouseDown={(event) => event.preventDefault()}
-                    edge="end"
-                  >
-                    <ContentCopy
-                      style={{
-                        color:
-                          currentTheme.palette.mode === "dark"
-                            ? "#ffffffb3"
-                            : "#00000061",
-                      }}
-                    />
-                  </IconButton>
-                </InputAdornment>
-              }
-            />
+            <table>
+              <tr>
+                <th colSpan={2}>I'll be available in,</th>
+              </tr>
+              <tr>
+                <th>
+                  <Icon
+                    icon="simple-icons:maildotru"
+                    className="icon"
+                    color={currentTheme.palette.primary.main}
+                    inline={true}
+                  />
+                </th>
+                <th>
+                  <CopyContentInput value={contact.email} setOpen={setOpen} />
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <Icon
+                    icon="fluent:phone-24-regular"
+                    width="35"
+                    height="35"
+                    className="icon"
+                    color={currentTheme.palette.primary.main}
+                    inline={true}
+                  />
+                </th>
+                <th>
+                  <CopyContentInput value={contact.mobile} setOpen={setOpen} />
+                </th>
+              </tr>
+            </table>
           </Typography>
         </div>
+        {/* TODO: Need to work on mobile view bugs for the below bar */}
         <div className="contact-container">
           <ul>
             <li className="social-bar">
@@ -229,7 +224,7 @@ export default function Contact() {
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
           Copied!

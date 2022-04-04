@@ -21,9 +21,6 @@ export default function Intro(props: any) {
   }, [mobileDeviceQuery]);
 
   useEffect(() => {
-    console.log("is moboile device = ", isMobileDevice);
-  }, [isMobileDevice]);
-  useEffect(() => {
     // @ts-ignore
     init(textRef.current, {
       showCursor: true,

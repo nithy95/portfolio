@@ -74,6 +74,7 @@ export const profile = {
     lastName: "Gopalsamy",
     birthDate: "02/09/1995",
     contact: {
+      mobile: "+91-9698860066",
       email: "nithy.official95@gmail.com",
       gitHub: "https://github.com/nithy95",
       linkedIn: "https://www.linkedin.com/in/gnithyanantham",
