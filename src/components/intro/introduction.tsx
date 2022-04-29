@@ -26,7 +26,7 @@ export default function Intro(props: any) {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ["Fullstack Developer", "Systems Designer", "Content Creator"],
+      strings: ["Fullstack Developer", "Software Architect", "Content Creator"],
     });
   }, []);
 
