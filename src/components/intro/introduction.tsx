@@ -76,13 +76,13 @@ export default function Intro(props: any) {
                 className="hire-me"
                 onClick={() => handleScroll("contact")}
               >
-                Hire Me
+                Contact Me
               </Button>
               <Button
                 className="know-more"
                 onClick={() => handleScroll("skills")}
               >
-                See My Profile
+                View My Profile
               </Button>
             </div>
           )}
